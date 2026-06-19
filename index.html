@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV de Yi Saint-Jour. Creative Project Lead, Estratega Visual y Diseñadora Multidisciplinaria. Gestión estratégica e investigación de comunidades.">
+    <title>CV - Javiera (Yi) Saint-Jour | Estratega Visual</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Estilo Editorial */
+            --bg-color: #FFFFFF;
+            --text-color: #111111;
+            --accent-color: #555555; 
+            --line-color: #000000;
+            --sidebar-bg: #fafafa;
+            --sidebar-border: #eee;
+            --font-main: 'Inter', Helvetica, Arial, sans-serif;
+            --sidebar-width: 250px;
+        }
+
+        /* RESET */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            margin: 0;
+            display: flex;
+        }
+
+        /* --- 1. BARRA LATERAL (SIDEBAR) --- */
+        .sidebar {
+            width: var(--sidebar-width);
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            background-color: var(--sidebar-bg); 
+            border-right: 1px solid var(--sidebar-border);
+            padding: 60px 30px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-shrink: 0;
+            z-index: 10;
+        }
+
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-item { margin-bottom: 18px; }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: block;
+            border-left: 2px solid transparent;
+            padding-left: 12px;
+            font-weight: 400;
+        }
+
+        .nav-link:hover {
+            color: #000;
+            padding-left: 18px;
+        }
+
+        .nav-link.active {
+            color: #000;
+            border-left: 2px solid #000;
+            padding-left: 18px;
+            font-weight: 600;
+        }
+
+        /* --- 2. CONTENIDO PRINCIPAL --- */
+        main {
+            flex: 1;
+            max-width: 1200px; 
+            margin: 0 auto;
+            padding: 80px 50px; 
+            position: relative; 
+        }
+
+        header { margin-bottom: 60px; }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .role {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--accent-color);
+            margin-bottom: 30px;
+        }
+
+        .header-meta {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.9rem;
+            padding-top: 20px;
+            border-top: 2px solid var(--line-color);
+        }
+
+        .mobile-nav { display: none; }
+
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            color: var(--accent-color);
+            flex-wrap: wrap;
+        }
+        
+        a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .contact-links a:hover { text-decoration: underline; color: #000; }
+
+        section {
+            padding-top: 40px;
+            margin-bottom: 80px;
+            border-top: 1px solid #eee; 
+            scroll-margin-top: 40px;
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 40px;
+        }
+
+        h2 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            position: sticky;
+            top: 40px; 
+            height: fit-content;
+        }
+
+        h2::before {
+            content: "✶ ";
+            color: var(--text-color);
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .bio-text p {
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            color: #333;
+            max-width: 100%; 
+        }
+        .highlight {
+            font-weight: 500;
+            color: #000;
+            padding-left: 20px;
+            border-left: 3px solid var(--line-color);
+        }
+
+        .entry {
+            display: grid;
+            grid-template-columns: 1fr 140px;
+            gap: 30px; 
+        }
+
+        .entry-main h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .institution {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            color: #444;
+            margin-top: 10px;
+            line-height: 1.5;
+            max-width: 100%; 
+        }
+        
+        .description ul { padding-left: 18px; margin-top: 8px; }
+        .description li { margin-bottom: 5px; }
+
+        .date {
+            text-align: right;
+            font-size: 0.85rem;
+            font-weight: 500;
+            font-feature-settings: "tnum";
+            color: var(--accent-color);
+            white-space: pre-line; 
+        }
+
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+        }
+        
+        .comp-category h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        .comp-list { list-style: none; padding: 0; }
+        .comp-list li {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .toolkit-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .toolkit-level h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .toolkit-desc {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .tool-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .tool-items li {
+            font-size: 0.9rem;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 6px 12px;
+            border-radius: 4px;
+            border: 1px solid #eee;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid #333;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .ai-credit {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            margin-top: 20px;
+        }
+
+        #scrollTopBtn {
+            display: none; 
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: var(--text-color); 
+            color: white;
+            cursor: pointer;
+            padding: 0;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, background-color 0.2s ease;
+        }
+
+        #scrollTopBtn:hover {
+            background-color: #333;
+            transform: translateY(-5px);
+        }
+        
+        .arrow-up {
+            border: solid #FFFFFF;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 5px;
+            transform: rotate(-135deg);
+            margin-top: 6px;
+        }
+
+        @media (max-width: 900px) {
+            body { 
+                display: block; 
+                padding: 0;
+            }
+
+            .sidebar { display: none; }
+
+            .mobile-nav {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+                margin-top: 20px;
+                width: 100%;
+            }
+            .mobile-nav a {
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                font-weight: 600;
+                border-bottom: 1px solid transparent;
+            }
+
+            main { padding: 40px 25px; }
+
+            h1 { font-size: 2.5rem; }
+
+            section {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                padding-top: 25px;
+                margin-bottom: 50px;
+            }
+
+            h2 {
+                position: static;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #eee;
+                margin-bottom: 20px;
+            }
+
+            .entry {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+            .entry-main { order: 2; }
+            .date { 
+                order: 1; 
+                text-align: left; 
+                opacity: 0.8;
+                margin-bottom: 5px;
+            }
+
+            .header-meta { gap: 15px; }
+            
+            #scrollTopBtn {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#perfil" class="nav-link">Perfil</a></li>
+            <li class="nav-item"><a href="#competencias" class="nav-link">Competencias</a></li>
+            <li class="nav-item"><a href="#toolkit" class="nav-link">Toolkit</a></li>
+            <li class="nav-item"><a href="#experiencia" class="nav-link">Profesional</a></li>
+            <li class="nav-item"><a href="#docencia" class="nav-link">Docencia</a></li>
+            <li class="nav-item"><a href="#formacion" class="nav-link">Formación</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        
+        <header>
+            <h1>Javiera (Yi) Saint-Jour</h1>
+            <div class="role">Creative Project Lead | Estrategia de Branding e Investigación Sociocultural</div>
+            
+            <div class="header-meta">
+                
+                <div class="contact-links">
+                    <a href="https://wa.me/56949873116">+569-49873116</a>
+                    <a href="mailto:yi.creativa@gmail.com">yi.creativa@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/yyyi" target="_blank">LinkedIn</a>
+                    <a href="https://www.behance.net/yyyi" target="_blank">Portafolio</a>
+                    <a href="https://yyyi-creativa.github.io/exploracion_IA/" target="_blank">Exploración IA</a>
+                </div>
+
+                <nav class="mobile-nav">
+                    <a href="#perfil">Perfil</a>
+                    <a href="#competencias">Skills</a>
+                    <a href="#experiencia">Experiencia</a>
+                    <a href="#docencia">Docencia</a>
+                    <a href="#formacion">Formación</a>
+                </nav>
+
+            </div>
+        </header>
+
+        <section id="perfil">
+            <h2>Perfil</h2>
+            <div class="content bio-text">
+                    <div class="profile-text">
+                        <h3>Estratega Visual especializada en Identidades de Nicho</h3>
+                        <p>
+                            Integro la investigación de comunidades con la gestión de proyectos corporativos para construir ecosistemas de marca coherentes. Lidero equipos y orquesto flujos de trabajo, asegurando que el diseño final responda a un fundamento estratégico y no solo estético.
+                        </p>
+                    </div>
+                <p>
+                    Egresada con distinción máxima como Diseñadora de la Universidad de Chile, mi metodología abarca el espectro completo del branding: <strong>observo, descifro, dirijo y diseño</strong>. Tengo experiencia comprobada traduciendo necesidades complejas y analizando el comportamiento de audiencias hiper-segmentadas (fandoms, sectores culturales y tecnológicos) para generar identidades, publicaciones y narrativas visuales de alto impacto.
+                </p>
+                <p class="highlight">
+                    Mi mayor fortaleza es la traducción estratégica. Actúo como el puente analítico entre los objetivos de la marca y la ejecución técnica, aplicando metodologías rigurosas y herramientas generativas (IA) para optimizar el control de calidad visual y discursivo.
+                </p>
+            </div>
+        </section>
+
+        <section id="competencias">
+            <h2>Competencias Clave</h2>
+            <div class="content">
+                <div class="competencies-grid">
+                    
+                    <div class="comp-category">
+                        <h3>Gestión y Estrategia</h3>
+                        <ul class="comp-list">
+                            <li>Design Project Management</li>
+                            <li>Investigación Sociocultural de Audiencias</li>
+                            <li>Estrategia de Branding e Identidad</li>
+                            <li>Dirección de Arte 360°</li>
+                            <li>Redacción Estratégica corporativa</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comp-category">
+                        <h3>Dominio Técnico</h3>
+                        <ul class="comp-list">
+                            <li>Diseño Digital y Ecosistemas Visuales</li>
+                            <li>Implementación de IA Generativa</li>
+                            <li>Motion Graphics y Animación</li>
+                            <li>Diseño Editorial y Transmedia</li>
+                            <li>Ilustración 2D y Concept Art 3D</li>
+                        </ul>
+                    </div>
+
+                    <div class="comp-category">
+                        <h3>Metodología</h3>
+                        <ul class="comp-list">
+                            <li>Metodología de Observación (Desciframiento)</li>  
+                            <li>Traducción de Briefs a Flujos Operativos</li>
+                            <li>Control de Calidad (QA) Estratégico</li>
+                            <li>Design Thinking y Resolución UX</li>
+                            <li>Liderazgo en Entornos Ágiles</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="toolkit">
+            <h2>Toolkit Digital y Software</h2>
+            <div class="content">
+                <div class="toolkit-grid">
+                    
+                    <div class="toolkit-level">
+                        <h3>Nivel Avanzado | Arquitectura Visual</h3>
+                        <span class="toolkit-desc">Dominio estratégico para dirección de arte y ejecución en alta fidelidad.</span>
+                        <ul class="tool-items">
+                            <li>✦ Photoshop</li>
+                            <li>✦ Illustrator</li>
+                            <li>✦ InDesign</li>
+                            <li>✦ After Effects</li>
+                            <li>✦ Premiere Pro</li>
+                        </ul>
+                    </div>
+
+                    <div class="toolkit-level">
+                        <h3>Nivel Intermedio | Prototipado y Contenido</h3>
+                        <span class="toolkit-desc">Herramientas ágiles para validación visual e ilustración técnica.</span>
+                        <ul class="tool-items">
+                            <li>✦ Figma (Arquitectura UI/UX)</li>
+                            <li>✦ Procreate (Ilustración Concept)</li>
+                            <li>✦ Nomad Sculpt (3D)</li>
+                            <li>✦ Midjourney / ChatGPT (IA Generativa)</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia">
+            <h2>Experiencia Profesional</h2>
+            <div class="content">
+                
+                <article class="entry">
+                    <div class="entry-main">
+                        <h3>Coordinadora de Proyectos (Design Project Manager)</h3>
+                        <span class="institution">Santiago Design Experience (SDE)</span>
+                        <div class="description">
+                            <ul>
+                            <li><strong>Gestión Estratégica de Cuentas B2B:</strong> Dirección de identidades y ecosistemas digitales para marcas tecnológicas (Sixbell, Be Aware). Traducción de requerimientos del cliente en lineamientos visuales y narrativos concretos.</li>
+                            <li><strong>Dirección Editorial y Tono de Voz:</strong> Orquestación colaborativa con equipos de periodismo. Responsable del control de calidad discursivo, garantizando que el lenguaje técnico aterrice en una comunicación efectiva.</li>
+                            <li><strong>Orquestación de Flujos e Innovación (IA):</strong> Diseño e implementación de procesos productivos utilizando IA generativa para optimizar tiempos. Liderazgo del QA (Control de Calidad) velando por la precisión técnica y la coherencia absoluta de la marca.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="date">Jun 2025 – Presente</span>
+                </article>
+
+                <article class="entry">
+                    <div class="entry-main">
+                        <h3>Lead Designer & Estratega Visual de Audiencias</h3>
+                        <span class="institution">Urimusic Entertainment (Giras LATAM)</span>
+                        <div class="description">
+                            <p>Análisis sociocultural de comunidades digitales (K-fandom) para el diseño y dirección de arte de campañas de alto impacto emocional en Chile, Brasil, México y Perú.</p>
+                            <ul>
+                                <li><strong>Diseño de Ecosistemas 360°:</strong> Conceptualización y ejecución gráfica para eventos masivos (Fanmeetings 'IN LOVE' y 'OUR TIME'; Conciertos Dreamcatcher y pH-1), incluyendo gran formato, señalética y merchandising oficial.</li>
+                                <li><strong>Gestión Internacional:</strong> Negociación visual y adaptación estricta de normativas gráficas corporativas extranjeras a los parámetros locales de cada país.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="date">Abr 2023 – Mar 2025</span>
+                </article>
+
+                <article class="entry">
+                    <div class="entry-main">
+                        <h3>Consultora de Identidad Visual y Directora de Arte</h3>
+                        <span class="institution">Profesional Independiente</span>
+                        <div class="description">
+                            <p>Desarrollo metodológico para marcas y proyectos culturales. Asesoramiento en posicionamiento visual, creación de narrativas gráficas y ejecución técnica multimedia (diseño, foto, ilustración).</p>
+                        </div>
+                    </div>
+                    <span class="date">Jun 2019 – Presente</span>
+                </article>
+
+                <h3 style="margin-top: 20px; font-size: 0.9rem; text-transform: uppercase; color: #555; border-bottom: 1px solid #eee; padding-bottom: 5px;">Proyectos Destacados</h3>
+
+                <article class="entry">
+                    <div class="entry-main">
+                        <h3>Diseño de Experiencias Inmersivas (AR)</h3>
+                        <span class="institution">CRTIC - Congreso Futuro</span>
+                        <div class="description">
+                            <p>Conceptualización y programación de filtros de Realidad Aumentada para la exhibición “SinfonIA Digital”, cruzando tecnología y divulgación científica.</p>
+                        </div>
+                    </div>
+                    <span class="date">Dic 2023 – Ene 2024</span>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="docencia">
+            <h2>Docencia y Academia</h2>
+            <div class="content">
+                
+                <article class="entry">
+                    <div class="entry-main">
+                        <h3>Ayudante Académica y Guía Metodológica</h3>
+                        <span class="institution">Facultad de Arquitectura y Urbanismo (FAU) - U. de Chile</span>
+                        <div class="description">
+                            <p>Acompañamiento a estudiantes de ciclo avanzado (cátedra Prof. Rodrigo Dueñas). Foco en la validación de conceptos de identidad visual y sustentación teórica del diseño frente a comités evaluadores.</p>
+                        </div>
+                    </div>
+                    <span class="date">2023 – 2025</span>
+                </article>
+
+                <article class="entry">
+                    <div class="entry-main">
+                        <h3>Instructora de Tecnologías Inmersivas (Meta Spark)</h3>
+                        <span class="institution">CRTIC</span>
+                        <div class="description">
+                            <p>Liderazgo del "Programa de Formación en Meta Spark". Capacitación a creativos en el cruce estratégico entre tecnología inmersiva y comunicación visual.</p>
+                        </div>
+                    </div>
+                    <span class="date">2023</span>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="formacion">
+            <h2>Formación</h2>
+            <div class="content">
+                
+                <h3 style="margin-bottom: 15px; font-size: 0.95rem; color: #777;">ACADÉMICA</h3>
+                
+                <article class="entry">
+                    <div class="entry-main">
+                        <h3>Licenciada en Diseño (Mención Gráfica)</h3>
+                        <span class="institution">Universidad de Chile</span>
+                        <div class="description">Titulada con Distinción Máxima. Foco en investigación y desarrollo de proyectos editoriales e identitarios de alta complejidad teórica.</div>
+                    </div>
+                    <span class="date">2016 – 2022</span>
+                </article>
+
+                <article class="entry">
+                    <div class="entry-main">
+                        <h3>Estudios de Pregrado en Ingeniería Comercial</h3>
+                        <span class="institution">Universidad Técnica Federico Santa María</span>
+                        <div class="description">Fundamentos sólidos de economía, administración y visión de negocio aplicables al diseño estratégico.</div>
+                    </div>
+                    <span class="date">2013 – 2014</span>
+                </article>
+
+                <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 0.95rem; color: #777;">ESPECIALIZACIÓN E INVESTIGACIÓN</h3>
+
+                <article class="entry">
+                    <div class="entry-main">
+                        <h3>Gestión de Públicos y Comunidades Culturales</h3>
+                        <span class="institution">Ministerio de las Culturas, las Artes y el Patrimonio (MinCAP)</span>
+                        <div class="description">Estudios sobre comportamiento, segmentación y vinculación estratégica de audiencias.</div>
+                    </div>
+                    <span class="date">2022</span>
+                </article>
+
+                <article class="entry">
+                    <div class="entry-main">
+                        <h3>Certificaciones en Tecnologías Emergentes (AR y 3D)</h3>
+                        <span class="institution">CRTIC (Centro para la Revolución Tecnológica en Industrias Creativas)</span>
+                    </div>
+                    <span class="date">2023</span>
+                </article>
+
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="ai-credit">
+                Sitio desarrollado y diseñado por Yi Saint-Jour. 2026
+            </div>
+        </footer>
+
+    </main>
+
+    <button onclick="topFunction()" id="scrollTopBtn" title="Volver al inicio" aria-label="Volver arriba">
+        <span class="arrow-up"></span>
+    </button>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+            
+            scrollFunction(); 
+        });
+
+        let mybutton = document.getElementById("scrollTopBtn");
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                mybutton.style.display = "flex";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0; 
+        }
+    </script>
+</body>
+</html>
